@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="ad.size" content="width=728,height=90" />
+    <style>
+        .ad-bounds {
+            position: relative;
+            width: 728px;
+            height: 90px;
+            overflow: hidden;
+            background: #ffd70b;
+        }
+
+        .cards {
+            display: block;
+            position: relative;
+            width: 728px;
+            height: 90px;
+        }
+        .cards img {
+            position: absolute;
+            width: 728px;
+            height: 90px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+    </style>
+    <script type="text/javascript">
+    const getParameterByName = name => {
+        let match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    // var clickTag = getParameterByName('clickTag');
+    var clickTag = 'https://www.target.com';
+    </script>
+</head>
+<body>
+    <div class="ad-bounds">
+        <a class="cards" href="javascript:window.open(window.clickTag)" title="">
+            <img class="txt bg" src="images/image.jpg" alt="" />
+            <img class="txt button" src="images/button.svg" alt="" />
+            <img class="txt graphics" src="images/graphic.svg" alt="" />
+        </a>
+    </div>
+</body>
+
+</html>
